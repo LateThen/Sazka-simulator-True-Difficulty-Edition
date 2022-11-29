@@ -1,2 +1,2 @@
 # Sazka-simulator-Free-Win-Edition
-[Spustit](http://127.0.0.1:5500/index.html)
+[Spustit](https://github.com/LateThen/Sazka-simulator-Free-Win-Edition.git)
