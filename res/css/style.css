@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#banner {
+  position: relative;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: none;
+}
+#banner > #imageone {
+  width: 100%;
+  height: auto;
+}
+#banner > .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+#bannerzero {
+  position: relative;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#bannerzero > #imagezero {
+  width: 100%;
+  height: auto;
+}
+#bannerzero > #contentzero {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+#bannertwo {
+  position: relative;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: none;
+}
+#bannertwo > #imagetwo {
+  width: 100%;
+  height: auto;
+}
+#bannertwo > .contenttwo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+#buy {
+  position: absolute;
+  left: 500px;
+  text-align: right;
+}
+#amogus {
+  position: relative;
+  display: none;
+}
+#amogus > img {
+  width: 100%;
+  height: auto;
+}
+#amogus > .content2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+#enterzero {
+  border: 3px solid black;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px;
+  font-size: 30pt;
+  background-color: yellow;
+  cursor: pointer;
+  text-align: center;
+  left: 50%;
+  top: 70%;
+  position: fixed;
+  margin-left: -100px;
+  margin-right: -100px;
+}
+#enterzero:hover {
+  background-color: orange;
+}
+#enter {
+  border: 3px solid black;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px;
+  font-size: 30pt;
+  background-color: yellow;
+  cursor: pointer;
+  text-align: center;
+  left: 55.4%;
+  top: 33%;
+  position: fixed;
+  margin-left: -100px;
+  margin-right: -100px;
+  display: none;
+}
+#enter:hover {
+  background-color: orange;
+}
+#gameclear {
+  display: none;
+}
+#prachyvhrstimain {
+  display: none;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+}
+#drahokamymain {
+  display: none;
+  position: absolute;
+  left: 600px;
+  top: 100px;
+}
+#prachyvhrstiimg {
+  width: 200px;
+  height: 300px;
+}
+
+#drahokamyimg {
+  width: 200px;
+  height: 300px;
+}
+#zlatarybkaimg {
+  width: 200px;
+  height: 300px;
+}
+#tutovkaimg {
+  width: 200px;
+  height: 300px;
+}
+#modrydiamantimg {
+  width: 200px;
+  height: 300px;
+}
+#splnenysenimg {
+  width: 200px;
+  height: 300px;
+}
+#cernaperlaimg {
+  width: 200px;
+  height: 300px;
+}
+#stoctyrmilimg {
+  width: 200px;
+  height: 300px;
+}
+#zlatarybkamain {
+  display: none;
+  position: absolute;
+  left: 1000px;
+  top: 100px;
+}
+#tutovkamain {
+  display: none;
+  position: absolute;
+  left: 1400px;
+  top: 100px;
+}
+#modrydiamantmain {
+  display: none;
+  position: absolute;
+  left: 200px;
+  top: 400px;
+}
+#splnenysenmain {
+  display: none;
+  position: absolute;
+  left: 600px;
+  top: 400px;
+}
+#cernaperlamain {
+  display: none;
+  position: absolute;
+  left: 1000px;
+  top: 400px;
+}
+#stoctyrmain {
+  display: none;
+  position: absolute;
+  left: 1400px;
+  top: 400px;
+}
+#money {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 200px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#winningamount {
+  display: none;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 300x;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  text-align: left;
+}
+#gameclear {
+  display: none;
+  color: green;
+  background-color: chocolate;
+  border-radius: 25%;
+  font-size: 60px;
+  text-align: center;
+  position: absolute;
+  left: 100px;
+  top: -50x;
+}
+#getback {
+  display: none;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 200x;
+  position: absolute;
+  top: 800px;
+  left: 0px;
+  text-align: left;
+}
+#getbacktwo {
+  display: none;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 200x;
+  position: absolute;
+  top: 800px;
+  left: 0px;
+  text-align: left;
+}
+#homelessgame {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+#homeless {
+  display: none;
+  position: absolute;
+  left: 300px;
+  top: 400px;
+}
+#trash {
+  display: none;
+
+  position: absolute;
+  left: 900px;
+  top: 450px;
+}
+#take {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 200px;
+  position: absolute;
+  top: 25%;
+  right: 0%;
+}
