@@ -1,2 +1,2 @@
 # Sazka-simulator-Free-Win-Edition
-[Spustit]
+[Spustit](https://latethen.github.io/Sazka-simulator-Free-Win-Edition/)
