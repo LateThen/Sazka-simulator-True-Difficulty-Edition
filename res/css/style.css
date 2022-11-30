@@ -1,10 +1,20 @@
+@font-face {
+  font-family: "MinecraftFont";
+  src: url(font/MinecraftRegular-Bmg3.otf);
+}
+@font-face {
+  font-family: "MinecraftFontBold";
+  src: url(font/MinecraftBold-nMK1.otf);
+}
 body {
+  font-family: MinecraftFont;
   margin: 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
 }
+
 #banner {
   position: relative;
   margin: 0;
@@ -94,6 +104,8 @@ body {
   position: fixed;
   margin-left: -100px;
   margin-right: -100px;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
 }
 #enterzero:hover {
   background-color: orange;
@@ -107,12 +119,14 @@ body {
   background-color: yellow;
   cursor: pointer;
   text-align: center;
-  left: 55.4%;
-  top: 33%;
+  left: 55.7%;
+  top: 32%;
   position: fixed;
   margin-left: -100px;
   margin-right: -100px;
   display: none;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
 }
 #enter:hover {
   background-color: orange;
@@ -181,46 +195,48 @@ body {
   display: none;
   position: absolute;
   left: 200px;
-  top: 400px;
+  top: 500px;
 }
 #splnenysenmain {
   display: none;
   position: absolute;
   left: 600px;
-  top: 400px;
+  top: 500px;
 }
 #cernaperlamain {
   display: none;
   position: absolute;
   left: 1000px;
-  top: 400px;
+  top: 500px;
 }
 #stoctyrmain {
   display: none;
   position: absolute;
   left: 1400px;
-  top: 400px;
+  top: 500px;
 }
 #money {
   display: none;
   font-size: 40px;
   background-color: black;
   color: yellow;
-  width: 200px;
+
   position: absolute;
   top: 0px;
   right: 0px;
+  text-align: right;
 }
 #winningamount {
   display: none;
   font-size: 30px;
   background-color: black;
   color: white;
-  width: 300x;
+ 
   position: absolute;
   top: 50px;
   left: 0px;
   text-align: left;
+  font-family: MinecraftFont;
 }
 #gameclear {
   display: none;
@@ -243,6 +259,8 @@ body {
   top: 800px;
   left: 0px;
   text-align: left;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
 }
 #getbacktwo {
   display: none;
@@ -254,6 +272,8 @@ body {
   top: 800px;
   left: 0px;
   text-align: left;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
 }
 #homelessgame {
   display: none;
@@ -264,6 +284,8 @@ body {
   position: absolute;
   top: 50%;
   right: 0%;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
 }
 #homeless {
   display: none;
@@ -283,8 +305,91 @@ body {
   font-size: 40px;
   background-color: black;
   color: yellow;
-  width: 200px;
+  width: 225px;
   position: absolute;
   top: 25%;
-  right: 0%;
+  right: 2%;
+  font-family: MinecraftFont;
+  cursor: pointer;
+}
+#prachyvhrsti {
+  position: relative;
+  right: 197px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+#drahokamy {
+  position: relative;
+  right: 196Px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+#zlatarybka {
+  position: relative;
+  right: 190px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+#tutovka {
+  position: relative;
+  right: 190px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+#modrydiamant {
+  position: relative;
+  right: 197px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+#splnenysen {
+  position: relative;
+  right: 197px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+#cernaperla {
+  position: relative;
+  right: 188.5px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#stoctyrmil {
+  position: relative;
+  right: 201px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
 }
