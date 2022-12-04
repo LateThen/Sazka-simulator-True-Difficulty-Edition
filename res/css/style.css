@@ -71,6 +71,24 @@ body {
   bottom: 0;
   overflow: auto;
 }
+#bannerthree {
+  position: relative;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: none;
+}
+#bannerthree > #imagethree {
+  width: 100%;
+  height: auto;
+}
+#bannerthree > .contentthree {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;}
 #buy {
   position: absolute;
   left: 500px;
@@ -392,4 +410,60 @@ body {
   font-family: MinecraftFont;
   cursor: pointer;
   font-size: 20px;
+}
+#buyitems {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 200px;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
+
+
+
+}
+#getbackthree{
+display: none;
+font-size: 30px;
+background-color: black;
+color: white;
+width: 200x;
+position: absolute;
+top: 800px;
+right: 0px;
+text-align: left;
+cursor: pointer;
+font-family: MinecraftFontBold;}
+#buycart {
+ display: none;
+ position: absolute;
+ right: 197px;
+ top: 30px;
+ background-color: black;
+ color: white;
+ font-family: MinecraftFont;
+ cursor: pointer;
+ font-size: 20px;
+}
+#shopcart {
+  position: absolute;
+  right: 200px;
+  top: 400px;
+display: none;
+  
+}
+#shopcartimg {
+ 
+  width: 250px;
+  height: 300px;
+}
+#debugcart
+{
+ color: black;
+  position: absolute;
+  left: 0px;
 }

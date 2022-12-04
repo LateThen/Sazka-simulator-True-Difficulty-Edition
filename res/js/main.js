@@ -4,6 +4,7 @@ const enterzero = document.getElementById("enterzero");
 const amogus = document.getElementById("amogus");
 const banner = document.getElementById("banner");
 const bannerzero = document.getElementById("bannerzero");
+const bannerthree = document.getElementById("bannerthree");
 const prachyvhrsti = document.getElementById("prachyvhrsti");
 const drahokamy = document.getElementById("drahokamy");
 const zlatarybka = document.getElementById("zlatarybka");
@@ -30,6 +31,12 @@ const bannertwo = document.getElementById("bannertwo");
 const homeless = document.getElementById("homeless");
 const take = document.getElementById("take");
 const trash = document.getElementById("trash");
+const buyitems = document.getElementById("buyitems");
+const getbackthree = document.getElementById("getbackthree");
+const shopcart = document.getElementById("shopcart");
+const buycart = document.getElementById("buycart");
+const debugcart = document.getElementById("debugcart");
+
 enterzero.onclick = () => {
   amogus.style.display = "none";
   enter.style.display = "block";
@@ -38,6 +45,7 @@ enterzero.onclick = () => {
   bannerzero.style.display = "none";
   money.style.display = "block";
   homelessgame.style.display = "block";
+  buyitems.style.display = "block";
 };
 getback.onclick = () => {
   amogus.style.display = "none";
@@ -57,7 +65,8 @@ getback.onclick = () => {
   winningamount.style.display = "none";
   homelessgame.style.display = "block";
   getback.style.display = "none";
-  money.style.color = "yellow"
+  money.style.color = "yellow";
+  buyitems.style.display = "block";
 };
 homelessgame.onclick = () => {
   getbacktwo.style.display = "block";
@@ -69,6 +78,9 @@ homelessgame.onclick = () => {
   take.style.display = "block";
   homeless.style.display = "block";
   trash.style.display = "block";
+  buyitems.style.display = "none";
+  winningamount.innerHTML = "Vybírejte popelnici";
+  winningamount.style.color = "gray";
 };
 getbacktwo.onclick = () => {
   banner.style.display = "block";
@@ -79,7 +91,7 @@ getbacktwo.onclick = () => {
   winningamount.style.display = "none";
   take.style.display = "none";
   homeless.style.display = "none";
-
+  buyitems.style.display = "block";
   trash.style.display = "none";
 };
 let cash = 20;
@@ -337,18 +349,11 @@ let splnenysenprize = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100, 100,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100, 100, 100,
   100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
-  100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+  100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
-  200, 200, 500, 500, 5000000,
+  200, 500, 500, 5000000,
 ];
 let cernaperlaprize = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -404,13 +409,11 @@ let stoctyrmilprize = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100, 100, 100, 100, 100, 100, 100,
   100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
   100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
   100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
-  100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 200, 200,
+  100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
@@ -423,19 +426,18 @@ let stoctyrmilprize = [
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
   200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
-  200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
-  200, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
+  200, 200, 200, 200, 200, 200, 200, 400, 400, 400, 400, 400, 400, 400, 400,
   400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
   400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
+  400, 400, 400, 400, 400, 400, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
   1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
-  1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 2000, 2000,
+  1000, 1000, 1000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000,
   2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000,
   2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000,
   2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000,
-  2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000,
-  2000, 50000, 50000, 50000, 50000, 50000, 50000, 100000, 100000, 100000,
+  2000, 2000, 2000, 2000, 2000, 2000, 50000, 50000, 50000, 50000, 50000, 50000,
   100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000, 100000,
-  240000, 240000, 240000, 10000000,
+  100000, 100000, 100000, 240000, 240000, 240000, 10000000,
 ];
 enter.onclick = () => {
   prachyvhrstimain.style.display = "block";
@@ -453,7 +455,9 @@ enter.onclick = () => {
   getback.style.display = "block";
   homelessgame.style.display = "none";
   money.style.color = "white";
-
+  buyitems.style.display = "none";
+  winningamount.innerHTML = "Kupte los";
+  winningamount.style.color = "yellow";
 };
 
 prachyvhrsti.onclick = () => {
@@ -597,6 +601,63 @@ take.onclick = () => {
     if (trashvalue == 0) winningamount.style.color = "red";
   }
 };
+
+let cartfix = 0;
+let cartfixed = 0;
+let cartprice = 7000;
 take.onmouseout = () => {
   homeless.style.left = "300px";
+};
+buyitems.onclick = () => {
+  bannerthree.style.display = "block";
+  getbackthree.style.display = "block";
+  banner.style.display = "none";
+  enter.style.display = "none";
+  homelessgame.style.display = "none";
+  buyitems.style.display = "none";
+  winningamount.style.display = "block";
+  winningamount.innerHTML = "Koupit item za: -" + " Kč";
+  buycart.style.display = "block";
+  winningamount.style.color = "gray";
+
+  if (cartfix == 1) {
+    shopcart.style.display = "block";
+    buycart.style.display = "none";
+  }
+  if (cartfix < 1) {
+    shopcart.style.display = "none";
+    buycart.style.display = "block";
+  }
+};
+getbackthree.onclick = () => {
+  bannerthree.style.display = "none";
+  getbackthree.style.display = "none";
+  banner.style.display = "block";
+  enter.style.display = "block";
+  homelessgame.style.display = "block";
+  buyitems.style.display = "block";
+  winningamount.style.display = "none";
+  shopcart.style.display = "none";
+  buycart.style.display = "none";
+};
+buycart.onclick = () => {
+  if (cartprice <= cash) {
+    cartfix += 1;
+    cash -= cartprice;
+    shopcart.style.display = "block";
+    buycart.style.display = "none";
+    money.innerHTML = cash + " Kč";
+    winningamount.innerHTML = "Koupil/a jste nákupní vozík";
+    winningamount.style.color = "green";
+  }
+
+  if (cartprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    cartfix == 0;
+  }
+};
+buycart.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML = "Koupit nákupní vozík za " + cartprice + " Kč";
 };
