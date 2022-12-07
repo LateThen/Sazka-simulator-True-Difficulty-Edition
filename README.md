@@ -3,6 +3,9 @@
 
 
 
+<h2>1.0.3 Update</h2>
+<p>- Added Standard Car</p>
+<p>- Added Ferrari</p>
 
 <h2>1.0.2 Update</h2>
 <p>- Shop Option</p>
