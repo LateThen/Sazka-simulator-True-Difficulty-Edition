@@ -2,6 +2,9 @@
 [Spustit](https://latethen.github.io/Sazka-simulator-True-Difficulty-Edition/)
 
 
+<h2>1.0.34 Update</h2>
+<p>- Bug Fixes</p>
+
 
 <h2>1.0.3 Update</h2>
 <p>- Added Standard Car</p>
