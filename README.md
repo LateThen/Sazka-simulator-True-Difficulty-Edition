@@ -2,7 +2,7 @@
 [Spustit](https://latethen.github.io/Sazka-simulator-True-Difficulty-Edition/)
 
 
-<h2>1.0.34 Update</h2>
+<h2>1.0.4 Update</h2>
 <p>- Bug Fixes</p>
 
 
