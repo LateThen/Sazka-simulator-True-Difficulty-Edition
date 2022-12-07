@@ -613,7 +613,7 @@ let cartprice = 7000;
 let standardcarfix = 0;
 let standardcarprice = 700000;
 let bettercarfix = 0;
-let bettercarprice = 3500000;
+let bettercarprice = 10000000;
 take.onmouseout = () => {
   homeless.style.left = "300px";
 };
@@ -718,6 +718,8 @@ buystandardcar.onclick = () => {
   winningamount.style.color = "green";
   buystandardcar.style.display = "none";
   buybettercar.style.display = "block";
+  money.innerHTML = cash + " Kč";
+
 
   if (standardcarprice > cash) {
     winningamount.innerHTML = "Nemáte dostatek penízek :C";
@@ -737,6 +739,8 @@ buystandardcar.onclick = () => {
   winningamount.innerHTML = "Koupil/a jste lepší auto";
   winningamount.style.color = "green";
   buybettercar.style.display = "none";
+  money.innerHTML = cash + " Kč";
+
 
 
   if (bettercarprice > cash) {
