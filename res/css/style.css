@@ -438,6 +438,7 @@ right: 0px;
 text-align: left;
 cursor: pointer;
 font-family: MinecraftFontBold;}
+
 #buycart {
  display: none;
  position: absolute;
@@ -467,3 +468,64 @@ display: none;
   position: absolute;
   left: 0px;
 }
+#buystandardcar {
+  display: none;
+  position: absolute;
+  right: 300px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+ }
+ #standardcar {
+   position: absolute;
+   right: 200px;
+   top: 400px;
+ display: none;
+   
+ }
+ #standardcarimg {
+  
+   width: 300x;
+   height: 300px;
+ }
+ #debugstandardcar
+ {
+  color: black;
+   position: absolute;
+   left: 0px;
+ }
+ #buybettercar {
+  display: none;
+  position: absolute;
+  right: 300px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+ }
+ #bettercar {
+   position: absolute;
+   right: 200px;
+   top: 400px;
+ display: none;
+   
+ }
+ #bettercarimg {
+  
+   width: 300x;
+   height: 300px;
+ }
+ #debugbettercar
+ {
+  color: black;
+   position: absolute;
+   left: 0px;
+ }
+ 

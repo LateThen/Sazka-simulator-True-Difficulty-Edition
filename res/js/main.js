@@ -36,6 +36,12 @@ const getbackthree = document.getElementById("getbackthree");
 const shopcart = document.getElementById("shopcart");
 const buycart = document.getElementById("buycart");
 const debugcart = document.getElementById("debugcart");
+const standardcar = document.getElementById("standardcar");
+const buystandardcar = document.getElementById("buystandardcar");
+const debugstandardcar = document.getElementById("debugstandardcar");
+const bettercar = document.getElementById("bettercar");
+const buybettercar = document.getElementById("buybettercar");
+const debugbettercar = document.getElementById("debugbettercar");
 
 enterzero.onclick = () => {
   amogus.style.display = "none";
@@ -603,8 +609,11 @@ take.onclick = () => {
 };
 
 let cartfix = 0;
-let cartfixed = 0;
 let cartprice = 7000;
+let standardcarfix = 0;
+let standardcarprice = 700000;
+let bettercarfix = 0;
+let bettercarprice = 3500000;
 take.onmouseout = () => {
   homeless.style.left = "300px";
 };
@@ -628,6 +637,29 @@ buyitems.onclick = () => {
     shopcart.style.display = "none";
     buycart.style.display = "block";
   }
+  if (standardcarfix < 1, cartfix == 1) {
+    shopcart.style.display = "block";
+    buycart.style.display = "none";
+    buystandardcar.style.display = "block";
+  }
+ 
+   if (standardcarfix == 1){
+    buystandardcar.style.display = "none";
+    buycart.style.display = "none";
+    shopcart.style.display = "none";
+    standardcar.style.display = "block";
+    buybettercar.style.display = "block";
+   }
+
+if (bettercarfix == 1){
+  buybettercar.style.display = "none";
+  buycart.style.display = "none";
+ shopcart.style.display = "none";
+ standardcar.style.display = "none";
+ bettercar.style.display = "block";
+
+
+  }
 };
 getbackthree.onclick = () => {
   bannerthree.style.display = "none";
@@ -639,7 +671,11 @@ getbackthree.onclick = () => {
   winningamount.style.display = "none";
   shopcart.style.display = "none";
   buycart.style.display = "none";
-};
+  buystandardcar.style.display = "none";
+  standardcar.style.display = "none";
+  bettercar.style.display = "none";
+  buybettercar.style.display = "none"
+}
 buycart.onclick = () => {
   if (cartprice <= cash) {
     cartfix += 1;
@@ -649,6 +685,8 @@ buycart.onclick = () => {
     money.innerHTML = cash + " Kč";
     winningamount.innerHTML = "Koupil/a jste nákupní vozík";
     winningamount.style.color = "green";
+    buystandardcar.style.display = "block";
+    
   }
 
   if (cartprice > cash) {
@@ -656,8 +694,63 @@ buycart.onclick = () => {
     winningamount.style.color = "red";
     cartfix == 0;
   }
+
 };
 buycart.onmouseover = () => {
   winningamount.style.color = "white";
   winningamount.innerHTML = "Koupit nákupní vozík za " + cartprice + " Kč";
 };
+buystandardcar.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML = "Koupit osobní auto za " + standardcarprice + " Kč";
+};
+buybettercar.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML = "Koupit lepší auto za " + bettercarprice + " Kč";
+};
+buystandardcar.onclick = () => {
+ if (standardcarprice <= cash)
+ {standardcarfix +=1;
+  cash -= standardcarprice;
+  shopcart.style.display = "none";
+  standardcar.style.display = "block";
+  winningamount.innerHTML = "Koupil/a jste osobní auto";
+  winningamount.style.color = "green";
+  buystandardcar.style.display = "none";
+  buybettercar.style.display = "block";
+
+  if (standardcarprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    standardcarfix == 0;
+  }
+
+
+
+ }
+ buybettercar.onclick = () => {
+  if (bettercarprice <= cash)
+  bettercarfix +=1;
+  cash -= bettercarprice;
+  standardcar.style.display = "none";
+  bettercar.style.display = "block";
+  winningamount.innerHTML = "Koupil/a jste lepší auto";
+  winningamount.style.color = "green";
+  buybettercar.style.display = "none";
+
+
+  if (bettercarprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    bettercarfix == 0;
+  }
+
+
+
+
+
+ }
+
+
+
+}
