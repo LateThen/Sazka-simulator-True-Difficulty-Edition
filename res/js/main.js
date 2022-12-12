@@ -42,6 +42,10 @@ const debugstandardcar = document.getElementById("debugstandardcar");
 const bettercar = document.getElementById("bettercar");
 const buybettercar = document.getElementById("buybettercar");
 const debugbettercar = document.getElementById("debugbettercar");
+const tieronehouse = document.getElementById("tieronehouse");
+const buytieronehouse = document.getElementById("buytieronehouse");
+const debugtieronehouse = document.getElementById("debugtieronehouse");
+
 
 enterzero.onclick = () => {
   amogus.style.display = "none";
@@ -614,6 +618,9 @@ let standardcarfix = 0;
 let standardcarprice = 700000;
 let bettercarfix = 0;
 let bettercarprice = 10000000;
+let tieronehousefix = 0;
+let tieronehouseprice = 10000;
+
 take.onmouseout = () => {
   homeless.style.left = "300px";
 };
@@ -628,6 +635,8 @@ buyitems.onclick = () => {
   winningamount.innerHTML = "Koupit item za: -" + " Kč";
   buycart.style.display = "block";
   winningamount.style.color = "gray";
+  buytieronehouse.style.display = "block";
+
 
   if (cartfix == 1) {
     shopcart.style.display = "block";
@@ -660,7 +669,14 @@ if (bettercarfix == 1){
 
 
   }
-};
+  if (tieronehousefix == 1)
+{buytieronehouse.style.display = "none";
+tieronehouse.style.display = "block";
+} if (tieronehousefix < 1)
+{buytieronehouse.style.display = "block";
+tieronehouse.style.display = "none";
+
+};}
 getbackthree.onclick = () => {
   bannerthree.style.display = "none";
   getbackthree.style.display = "none";
@@ -674,7 +690,9 @@ getbackthree.onclick = () => {
   buystandardcar.style.display = "none";
   standardcar.style.display = "none";
   bettercar.style.display = "none";
-  buybettercar.style.display = "none"
+  buybettercar.style.display = "none";
+  buytieronehouse.style.display = "none";
+  tieronehouse.style.display = "none";
 }
 buycart.onclick = () => {
   if (cartprice <= cash) {
@@ -707,6 +725,10 @@ buystandardcar.onmouseover = () => {
 buybettercar.onmouseover = () => {
   winningamount.style.color = "white";
   winningamount.innerHTML = "Koupit lepší auto za " + bettercarprice + " Kč";
+};
+buytieronehouse.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML = "Koupit tier 1 barák za " + tieronehouseprice + " Kč";
 };
 buystandardcar.onclick = () => {
  if (standardcarprice <= cash)
@@ -756,5 +778,21 @@ buystandardcar.onclick = () => {
  }
 
 
+
+}
+buytieronehouse.onclick = () =>{
+  if (tieronehouseprice <= cash){
+  tieronehousefix +=1;
+  cash -= tieronehouseprice;
+  buytieronehouse.style.display = "none";
+  winningamount.innerHTML = "Koupil/a jste hliněný barák";
+  winningamount.style.color = "green";
+  tieronehouse.style.display = "block";
+  money.innerHTML = cash + " Kč";}
+if (tieronehouseprice > cash){
+  winningamount.innerHTML = "Nemáte dostatek penízek :C";
+  winningamount.style.color = "red";
+  tieronehousefix == 0;
+}
 
 }

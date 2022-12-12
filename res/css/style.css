@@ -442,7 +442,7 @@ font-family: MinecraftFontBold;}
 #buycart {
  display: none;
  position: absolute;
- right: 197px;
+ right: 500px;
  top: 30px;
  background-color: black;
  color: white;
@@ -471,7 +471,7 @@ display: none;
 #buystandardcar {
   display: none;
   position: absolute;
-  right: 300px;
+  right: 500px;
   top: 30px;
   background-color: black;
   color: white;
@@ -489,7 +489,7 @@ display: none;
  }
  #standardcarimg {
   
-   width: 300x;
+   width: 300;
    height: 300px;
  }
  #debugstandardcar
@@ -501,7 +501,7 @@ display: none;
  #buybettercar {
   display: none;
   position: absolute;
-  right: 300px;
+  right: 500px;
   top: 30px;
   background-color: black;
   color: white;
@@ -519,10 +519,41 @@ display: none;
  }
  #bettercarimg {
   
-   width: 300x;
+   width: 300;
    height: 300px;
  }
  #debugbettercar
+ {
+  color: black;
+   position: absolute;
+   left: 0px;
+ }
+ #buytieronehouse {
+  display: none;
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+ }
+ #tieronehouse {
+   position: absolute;
+   left: 150px;
+   top: 100px;
+ display: none;
+
+   
+ } #tieronehouseimg {
+  width: 900px;
+  height: 800px;
+  
+}
+
+ #debugtieronehouse
  {
   color: black;
    position: absolute;
