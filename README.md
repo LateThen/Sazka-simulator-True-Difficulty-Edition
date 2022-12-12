@@ -1,6 +1,9 @@
 # Sazka-simulator-True-Difficulty-Edition
 [Spustit](https://latethen.github.io/Sazka-simulator-True-Difficulty-Edition/)
 
+<h2>1.0.3 Update</h2>
+<p>- Added Dirt House </p>
+
 
 <h2>1.0.4 Update</h2>
 <p>- Bug Fixes</p>
