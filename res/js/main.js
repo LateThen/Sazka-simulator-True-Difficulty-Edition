@@ -5,6 +5,7 @@ const amogus = document.getElementById("amogus");
 const banner = document.getElementById("banner");
 const bannerzero = document.getElementById("bannerzero");
 const bannerthree = document.getElementById("bannerthree");
+const bannerfour = document.getElementById("bannerfour");
 const prachyvhrsti = document.getElementById("prachyvhrsti");
 const drahokamy = document.getElementById("drahokamy");
 const zlatarybka = document.getElementById("zlatarybka");
@@ -45,7 +46,26 @@ const debugbettercar = document.getElementById("debugbettercar");
 const tieronehouse = document.getElementById("tieronehouse");
 const buytieronehouse = document.getElementById("buytieronehouse");
 const debugtieronehouse = document.getElementById("debugtieronehouse");
-
+const tiertwohouse = document.getElementById("tiertwohouse");
+const buytiertwohouse = document.getElementById("buytiertwohouse");
+const debugtiertwohouse = document.getElementById("debugtiertwohouse");
+const tierthreehouse = document.getElementById("tierthreehouse");
+const buytierthreehouse = document.getElementById("buytierthreehouse");
+const debugtierthreehouse = document.getElementById("debugtierthreehouse");
+const tierfourhouse = document.getElementById("tierfourhouse");
+const buytierfourhouse = document.getElementById("buytierfourhouse");
+const debugtierfourhouse = document.getElementById("debugtierfourhouse");
+const dealerstore = document.getElementById("dealerstore");
+const getbackfour = document.getElementById("getbackfour");
+const buybabucko = document.getElementById("buybabucko");
+const buydoutnicek = document.getElementById("buydoutnicek");
+const homelessdeal = document.getElementById("homelessdeal");
+const taketwo = document.getElementById("taketwo");
+const trashtwo = document.getElementById("trashtwo");
+const takethree = document.getElementById("takethree");
+const trashthree = document.getElementById("trashthree");
+const ericdeal = document.getElementById("ericdeal");
+const finish = document.getElementById("finish");
 
 enterzero.onclick = () => {
   amogus.style.display = "none";
@@ -56,6 +76,7 @@ enterzero.onclick = () => {
   money.style.display = "block";
   homelessgame.style.display = "block";
   buyitems.style.display = "block";
+  dealerstore.style.display = "block";
 };
 getback.onclick = () => {
   amogus.style.display = "none";
@@ -77,7 +98,15 @@ getback.onclick = () => {
   getback.style.display = "none";
   money.style.color = "yellow";
   buyitems.style.display = "block";
+  dealerstore.style.display = "block";
+  if (doutnicekfix == 1) {
+    dealerstore.style.display = "none";
+  }
 };
+let babuckoprice = 100000;
+let babuckofix = 0;
+let doutnicekfix = 0;
+let doutnicekprice = 10000000;
 homelessgame.onclick = () => {
   getbacktwo.style.display = "block";
   banner.style.display = "none";
@@ -85,12 +114,64 @@ homelessgame.onclick = () => {
   homelessgame.style.display = "none";
   bannertwo.style.display = "block";
   winningamount.style.display = "block";
-  take.style.display = "block";
   homeless.style.display = "block";
-  trash.style.display = "block";
   buyitems.style.display = "none";
   winningamount.innerHTML = "Vybírejte popelnici";
   winningamount.style.color = "gray";
+  dealerstore.style.display = "none";
+  if ((babuckofix < 1, doutnicekfix < 1)) {
+    take.style.display = "block";
+    trash.style.display = "block";
+  }
+  if (babuckofix == 1) {
+    taketwo.style.display = "block";
+    trashtwo.style.display = "block";
+    take.style.display = "none";
+    trash.style.display = "none";
+  }
+  if (doutnicekfix == 1) {
+    takethree.style.display = "block";
+    trashthree.style.display = "block";
+    taketwo.style.display = "none";
+    trashtwo.style.display = "none";
+    take.style.display = "none";
+    trash.style.display = "none";
+  }
+};
+buybabucko.onclick = () => {
+  if (babuckoprice <= cash) {
+    babuckofix += 1;
+    cash -= babuckoprice;
+    buybabucko.style.display = "none";
+    buydoutnicek.style.display = "block";
+    winningamount.innerHTML =
+      "Koupil/a jste babůčko, zlepšili se Vám dropy z popelnice";
+    winningamount.style.color = "green";
+    money.innerHTML = cash + " Kč";
+    homelessdeal.style.left = "250px";
+  }
+  if (babuckoprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    babuckofix == 0;
+  }
+};
+buydoutnicek.onclick = () => {
+  if (doutnicekprice <= cash) {
+    doutnicekfix += 1;
+    cash -= doutnicekprice;
+    buydoutnicek.style.display = "none";
+    winningamount.innerHTML =
+      "Koupil/a jste doutníček, zlepšili se Vám o hodně dropy z popelnice";
+    winningamount.style.color = "green";
+    money.innerHTML = cash + " Kč";
+    homelessdeal.style.left = "250px";
+  }
+  if (doutnicekprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    doutnicekfix == 0;
+  }
 };
 getbacktwo.onclick = () => {
   banner.style.display = "block";
@@ -103,6 +184,14 @@ getbacktwo.onclick = () => {
   homeless.style.display = "none";
   buyitems.style.display = "block";
   trash.style.display = "none";
+  dealerstore.style.display = "block";
+  taketwo.style.display = "none";
+  takethree.style.display = "none";
+  trashtwo.style.display = "none";
+  trashthree.style.display = "none";
+  if (doutnicekfix == 1) {
+    dealerstore.style.display = "none";
+  }
 };
 let cash = 20;
 let prachyvhrstiprice = 20;
@@ -115,12 +204,6 @@ let cernaperlaprice = 50;
 let stoctyrmilprice = 200;
 
 let prachyvhrstiprize = [
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -468,6 +551,7 @@ enter.onclick = () => {
   buyitems.style.display = "none";
   winningamount.innerHTML = "Kupte los";
   winningamount.style.color = "yellow";
+  dealerstore.style.display = "none";
 };
 
 prachyvhrsti.onclick = () => {
@@ -598,6 +682,14 @@ let trashprize = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
   1, 4, 2, 5, 10,
 ];
+let trashprizetwo = [
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2,
+  2, 4, 8, 10, 20,
+];
+let trashprizethree = [
+  100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 400, 800, 1000,
+  2000,
+];
 
 take.onclick = () => {
   homeless.style.left = "800px";
@@ -612,6 +704,34 @@ take.onclick = () => {
   }
 };
 
+taketwo.onclick = () => {
+  homeless.style.left = "800px";
+  if ((cash) => 0) {
+    let trashvaluetwo =
+      trashprizetwo[Math.floor(Math.random() * trashprizetwo.length)];
+    cash += trashvaluetwo;
+    money.innerHTML = cash + " Kč";
+    winningamount.innerHTML = "Nalezl/a jste " + trashvaluetwo + " Kč";
+    winningamount.style.color = "green";
+    if (trashvaluetwo == 0) winningamount.innerHTML = "Nic jste nenalezl/a";
+    if (trashvaluetwo == 0) winningamount.style.color = "red";
+  }
+};
+
+takethree.onclick = () => {
+  homeless.style.left = "800px";
+  if ((cash) => 0) {
+    let trashvaluethree =
+      trashprizethree[Math.floor(Math.random() * trashprizethree.length)];
+    cash += trashvaluethree;
+    money.innerHTML = cash + " Kč";
+    winningamount.innerHTML = "Nalezl/a jste " + trashvaluethree + " Kč";
+    winningamount.style.color = "green";
+    if (trashvaluethree == 0) winningamount.innerHTML = "Nic jste nenalezl/a";
+    if (trashvaluethree == 0) winningamount.style.color = "red";
+  }
+};
+
 let cartfix = 0;
 let cartprice = 7000;
 let standardcarfix = 0;
@@ -620,8 +740,20 @@ let bettercarfix = 0;
 let bettercarprice = 10000000;
 let tieronehousefix = 0;
 let tieronehouseprice = 10000;
+let tiertwohousefix = 0;
+let tiertwohouseprice = 500000;
+let tierthreehousefix = 0;
+let tierthreehouseprice = 10000000;
+let tierfourhousefix = 0;
+let tierfourhouseprice = 100000000;
 
 take.onmouseout = () => {
+  homeless.style.left = "300px";
+};
+taketwo.onmouseout = () => {
+  homeless.style.left = "300px";
+};
+takethree.onmouseout = () => {
   homeless.style.left = "300px";
 };
 buyitems.onclick = () => {
@@ -636,7 +768,7 @@ buyitems.onclick = () => {
   buycart.style.display = "block";
   winningamount.style.color = "gray";
   buytieronehouse.style.display = "block";
-
+  dealerstore.style.display = "none";
 
   if (cartfix == 1) {
     shopcart.style.display = "block";
@@ -646,37 +778,63 @@ buyitems.onclick = () => {
     shopcart.style.display = "none";
     buycart.style.display = "block";
   }
-  if (standardcarfix < 1, cartfix == 1) {
+  if ((standardcarfix < 1, cartfix == 1)) {
     shopcart.style.display = "block";
     buycart.style.display = "none";
     buystandardcar.style.display = "block";
   }
- 
-   if (standardcarfix == 1){
+
+  if (standardcarfix == 1) {
     buystandardcar.style.display = "none";
     buycart.style.display = "none";
     shopcart.style.display = "none";
     standardcar.style.display = "block";
     buybettercar.style.display = "block";
-   }
-
-if (bettercarfix == 1){
-  buybettercar.style.display = "none";
-  buycart.style.display = "none";
- shopcart.style.display = "none";
- standardcar.style.display = "none";
- bettercar.style.display = "block";
-
-
   }
-  if (tieronehousefix == 1)
-{buytieronehouse.style.display = "none";
-tieronehouse.style.display = "block";
-} if (tieronehousefix < 1)
-{buytieronehouse.style.display = "block";
-tieronehouse.style.display = "none";
 
-};}
+  if (bettercarfix == 1) {
+    buybettercar.style.display = "none";
+    buycart.style.display = "none";
+    shopcart.style.display = "none";
+    standardcar.style.display = "none";
+    bettercar.style.display = "block";
+  }
+  if (tieronehousefix == 1) {
+    buytieronehouse.style.display = "none";
+    tieronehouse.style.display = "block";
+    buytiertwohouse.style.display = "block";
+  }
+  if (tieronehousefix < 1) {
+    buytieronehouse.style.display = "block";
+    tieronehouse.style.display = "none";
+  }
+  if ((tieronehousefix == 1, tiertwohousefix == 1)) {
+    buytiertwohouse.style.display = "none";
+    tieronehouse.style.display = "none";
+    tiertwohouse.style.display = "block";
+    buytierthreehouse.style.display = "block";
+  }
+
+  if ((tieronehousefix == 1, tiertwohousefix == 1, tierthreehousefix == 1)) {
+    buytierthreehouse.style.display = "none";
+    tiertwohouse.style.display = "none";
+    tierthreehouse.style.display = "block";
+    buytierfourhouse.style.display = "block";
+  }
+  if (
+    (tieronehousefix == 1,
+    tiertwohousefix == 1,
+    tierthreehousefix == 1,
+    tierfourhousefix == 1)
+  ) {
+    tierthreehouse.style.display = "none";
+    buytierfourhouse.style.display = "none";
+    tierfourhouse.style.display = "block";
+  }
+  if ((tierfourhousefix == 1, bettercarfix == 1)) {
+    finish.style.display = "block";
+  }
+};
 getbackthree.onclick = () => {
   bannerthree.style.display = "none";
   getbackthree.style.display = "none";
@@ -693,7 +851,18 @@ getbackthree.onclick = () => {
   buybettercar.style.display = "none";
   buytieronehouse.style.display = "none";
   tieronehouse.style.display = "none";
-}
+  buytiertwohouse.style.display = "none";
+  tiertwohouse.style.display = "none";
+  buytierthreehouse.style.display = "none";
+  tierthreehouse.style.display = "none";
+  buytierfourhouse.style.display = "none";
+  tierfourhouse.style.display = "none";
+  dealerstore.style.display = "block";
+  finish.style.display = "none";
+  if (doutnicekfix == 1) {
+    dealerstore.style.display = "none";
+  }
+};
 buycart.onclick = () => {
   if (cartprice <= cash) {
     cartfix += 1;
@@ -704,7 +873,6 @@ buycart.onclick = () => {
     winningamount.innerHTML = "Koupil/a jste nákupní vozík";
     winningamount.style.color = "green";
     buystandardcar.style.display = "block";
-    
   }
 
   if (cartprice > cash) {
@@ -712,7 +880,6 @@ buycart.onclick = () => {
     winningamount.style.color = "red";
     cartfix == 0;
   }
-
 };
 buycart.onmouseover = () => {
   winningamount.style.color = "white";
@@ -728,71 +895,277 @@ buybettercar.onmouseover = () => {
 };
 buytieronehouse.onmouseover = () => {
   winningamount.style.color = "white";
-  winningamount.innerHTML = "Koupit tier 1 barák za " + tieronehouseprice + " Kč";
+  winningamount.innerHTML =
+    "Koupit tier 1 barák za " + tieronehouseprice + " Kč";
 };
 buystandardcar.onclick = () => {
- if (standardcarprice <= cash)
- {standardcarfix +=1;
-  cash -= standardcarprice;
-  shopcart.style.display = "none";
-  standardcar.style.display = "block";
-  winningamount.innerHTML = "Koupil/a jste osobní auto";
-  winningamount.style.color = "green";
-  buystandardcar.style.display = "none";
-  buybettercar.style.display = "block";
-  money.innerHTML = cash + " Kč";
+  if (standardcarprice <= cash) {
+    standardcarfix += 1;
+    cash -= standardcarprice;
+    shopcart.style.display = "none";
+    standardcar.style.display = "block";
+    winningamount.innerHTML = "Koupil/a jste osobní auto";
+    winningamount.style.color = "green";
+    buystandardcar.style.display = "none";
+    buybettercar.style.display = "block";
+    money.innerHTML = cash + " Kč";
 
-
-  if (standardcarprice > cash) {
-    winningamount.innerHTML = "Nemáte dostatek penízek :C";
-    winningamount.style.color = "red";
-    standardcarfix == 0;
+    if (standardcarprice > cash) {
+      winningamount.innerHTML = "Nemáte dostatek penízek :C";
+      winningamount.style.color = "red";
+      standardcarfix == 0;
+    }
   }
-
-
-
- }
- buybettercar.onclick = () => {
-  if (bettercarprice <= cash)
-  bettercarfix +=1;
-  cash -= bettercarprice;
-  standardcar.style.display = "none";
-  bettercar.style.display = "block";
-  winningamount.innerHTML = "Koupil/a jste lepší auto";
-  winningamount.style.color = "green";
-  buybettercar.style.display = "none";
-  money.innerHTML = cash + " Kč";
-
-
+  buybettercar.onclick = () => {
+    if (bettercarprice <= cash) bettercarfix += 1;
+    cash -= bettercarprice;
+    standardcar.style.display = "none";
+    bettercar.style.display = "block";
+    winningamount.innerHTML = "Koupil/a jste lepší auto";
+    winningamount.style.color = "green";
+    buybettercar.style.display = "none";
+    money.innerHTML = cash + " Kč";
+  };
 
   if (bettercarprice > cash) {
     winningamount.innerHTML = "Nemáte dostatek penízek :C";
     winningamount.style.color = "red";
     bettercarfix == 0;
   }
+};
+buybettercar.onmouseout = () => {
+  if ((bettercarfix == 1) & (tierfourhousefix == 1)) {
+    finish.style.display = "block";
+  }
+};
 
+buytierfourhouse.onmouseout = () => {
+  if ((bettercarfix == 1) & (tierfourhousefix == 1)) {
+    finish.style.display = "block";
+  }
+};
 
+buytieronehouse.onclick = () => {
+  if (tieronehouseprice <= cash) {
+    tieronehousefix += 1;
+    cash -= tieronehouseprice;
+    buytieronehouse.style.display = "none";
+    winningamount.innerHTML = "Koupil/a jste hliněný barák";
+    winningamount.style.color = "green";
+    tieronehouse.style.display = "block";
+    money.innerHTML = cash + " Kč";
+    buytiertwohouse.style.display = "block";
+  }
 
+  if (tieronehouseprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    tieronehousefix == 0;
+  }
+};
+buytiertwohouse.onclick = () => {
+  if (tiertwohouseprice <= cash) {
+    tiertwohousefix += 1;
+    cash -= tiertwohouseprice;
+    buytiertwohouse.style.display = "none";
+    tieronehouse.style.display = "none";
 
+    winningamount.innerHTML = "Koupil/a jste železný barák";
+    winningamount.style.color = "green";
+    tiertwohouse.style.display = "block";
+    money.innerHTML = cash + " Kč";
+    buytierthreehouse.style.display = "block";
+  }
 
- }
+  if (tiertwohouseprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    tiertwohousefix == 0;
+  }
+};
+buytierthreehouse.onclick = () => {
+  if (tierthreehouseprice <= cash) {
+    tierthreehousefix += 1;
+    cash -= tierthreehouseprice;
+    buytierthreehouse.style.display = "none";
+    tiertwohouse.style.display = "none";
+    winningamount.innerHTML = "Koupil/a jste zlatý barák";
+    winningamount.style.color = "green";
+    tierthreehouse.style.display = "block";
+    money.innerHTML = cash + " Kč";
+    buytierfourhouse.style.display = "block";
+  }
 
+  if (tierthreehouseprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    tierthreehousefix == 0;
+  }
+};
+buytierfourhouse.onclick = () => {
+  if (tierfourhouseprice <= cash) {
+    tierfourhousefix += 1;
+    cash -= tierfourhouseprice;
+    buytierfourhouse.style.display = "none";
+    tierthreehouse.style.display = "none";
+
+    winningamount.innerHTML = "Koupil/a jste diamantový barák";
+    winningamount.style.color = "green";
+    tierfourhouse.style.display = "block";
+    money.innerHTML = cash + " Kč";
+  }
+  if (tierfourhouseprice > cash) {
+    winningamount.innerHTML = "Nemáte dostatek penízek :C";
+    winningamount.style.color = "red";
+    tierfourhousefix == 0;
+  }
+};
+buybabucko.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML = "Koupit babucko za " + babuckoprice + " Kč";
+};
+
+buydoutnicek.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML = "Koupit doutníček za " + doutnicekprice + " Kč";
+};
+dealerstore.onclick = () => {
+  enter.style.display = "none";
+  banner.style.display = "none";
+  homelessgame.style.display = "none";
+  buyitems.style.display = "none";
+  dealerstore.style.display = "none";
+  bannerfour.style.display = "block";
+  getbackfour.style.display = "block";
+  buybabucko.style.display = "block";
+  winningamount.style.display = "block";
+  winningamount.style.color = "gray";
+  winningamount.innerHTML = "Nakupujte u dealera";
+  homelessdeal.style.display = "block";
+  ericdeal.style.display = "block";
+
+  if (babuckofix == 1) {
+    buybabucko.style.display = "none";
+    buydoutnicek.style.display = "block";
+  }
+};
+getbackfour.onclick = () => {
+  enter.style.display = "block";
+  banner.style.display = "block";
+  homelessgame.style.display = "block";
+  buyitems.style.display = "block";
+  dealerstore.style.display = "block";
+  bannerfour.style.display = "none";
+  getbackfour.style.display = "none";
+  winningamount.style.display = "none";
+  buybabucko.style.display = "none";
+  buydoutnicek.style.display = "none";
+  homelessdeal.style.display = "none";
+  ericdeal.style.display = "none";
+  if (doutnicekfix == 1) {
+    dealerstore.style.display = "none";
+  }
+};
+let payall = 1000000000;
+finish.onmouseover = () => {
+winningamount.innerHTML = "Zaplatit všechny dluhy: " + payall + " Kč"
 
 
 }
-buytieronehouse.onclick = () =>{
-  if (tieronehouseprice <= cash){
-  tieronehousefix +=1;
-  cash -= tieronehouseprice;
-  buytieronehouse.style.display = "none";
-  winningamount.innerHTML = "Koupil/a jste hliněný barák";
-  winningamount.style.color = "green";
-  tieronehouse.style.display = "block";
-  money.innerHTML = cash + " Kč";}
-if (tieronehouseprice > cash){
-  winningamount.innerHTML = "Nemáte dostatek penízek :C";
-  winningamount.style.color = "red";
-  tieronehousefix == 0;
-}
+finish.onclick = () => {
+  if (payall <= cash) {
+    finish.style.display = "none";
+    winningamount.style.width = "800px";
+    winningamount.style.left = "30%";
+    winningamount.style.top = "30%";
+    winningamount.style.color = "green";
 
-}
+    winningamount.innerHTML =
+      "Zaplatil/a jste všechny dluhy a tím jste dohrál/a Sazka Simulátor - Michal Carska blahopřeje!";
+    take.style.display = "none";
+    trash.style.display = "none";
+    buyitems.style.display = "none";
+    getbackthree.style.display = "none";
+    shopcart.style.display = "none";
+    buycart.style.display = "none";
+    debugcart.style.display = "none";
+    standardcar.style.display = "none";
+    buystandardcar.style.display = "none";
+    debugstandardcar.style.display = "none";
+    bettercar.style.display = "none";
+    buybettercar.style.display = "none";
+    debugbettercar.style.display = "none";
+    tieronehouse.style.display = "none";
+    buytieronehouse.style.display = "none";
+    debugtieronehouse.style.display = "none";
+    tiertwohouse.style.display = "none";
+    buytiertwohouse.style.display = "none";
+    debugtiertwohouse.style.display = "none";
+    tierthreehouse.style.display = "none";
+    buytierthreehouse.style.display = "none";
+    debugtierthreehouse.style.display = "none";
+    tierfourhouse.style.display = "none";
+    buytierfourhouse.style.display = "none";
+    debugtierfourhouse.style.display = "none";
+    dealerstore.style.display = "none";
+    getbackfour.style.display = "none";
+    buybabucko.style.display = "none";
+    buydoutnicek.style.display = "none";
+    homelessdeal.style.display = "none";
+    taketwo.style.display = "none";
+    trashtwo.style.display = "none";
+    takethree.style.display = "none";
+    trashthree.style.display = "none";
+    ericdeal.style.display = "none";
+    finish.style.display = "none";
+    money.style.display = "none";
+    bannerzero.style.display = "block";
+  }
+  if (payall <= cash) {
+    finish.style.display = "none";
+    winningamount.style.width = "800px";
+    winningamount.style.left = "30%";
+    winningamount.style.top = "30%";
+    winningamount.style.color = "green";
+
+    winningamount.innerHTML =
+      "Zaplatil/a jste všechny dluhy a tím jste dohrál/a Sazka Simulátor - Michal Carska blahopřeje!";
+
+    bannerthree.style.display = "none";
+    winningamount.style.display = "block";
+    enter.style.display = "none";
+    amogus.style.display = "none";
+    banner.style.display = "none";
+
+    bannerfour.style.display = "none";
+    prachyvhrsti.style.display = "none";
+    drahokamy.style.display = "none";
+    zlatarybka.style.display = "none";
+    tutovka.style.display = "none";
+    modrydiamant.style.display = "none";
+    splnenysen.style.display = "none";
+    cernaperla.style.display = "none";
+    stoctyrmil.style.display = "none";
+    gameclear.style.display = "none";
+    generalbutton.style.display = "none";
+    prachyvhrstimain.style.display = "none";
+    drahokamymain.style.display = "none";
+    zlatarybkamain.style.display = "none";
+    tutovkamain.style.display = "none";
+    modrydiamantmain.style.display = "none";
+    splnenysenmain.style.display = "none";
+    cernaperlamain.style.display = "none";
+    stoctyrmain.style.display = "none";
+    moneyformat.style.display = "none";
+    getback.style.display = "none";
+    homelessgame.style.display = "none";
+    getbacktwo.style.display = "none";
+    bannertwo.style.display = "none";
+    homeless.style.display = "none";
+  }
+
+  if (payall > cash) {
+    winningamount.innerHTML = "Nemás dostatek peněz na zaplacení dluhů :(";
+    winningamount.style.color = "red";
+  }
+};

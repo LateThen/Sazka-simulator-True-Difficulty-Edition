@@ -34,6 +34,25 @@ body {
   bottom: 0;
   overflow: auto;
 }
+#bannerfour {
+  position: relative;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: none;
+}
+#bannerfour > #imagefour {
+  width: 100%;
+  height: auto;
+}
+#bannerfour > .contentfour {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
 #bannerzero {
   position: relative;
   margin: 0;
@@ -88,7 +107,8 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  overflow: auto;}
+  overflow: auto;
+}
 #buy {
   position: absolute;
   left: 500px;
@@ -249,7 +269,7 @@ body {
   font-size: 30px;
   background-color: black;
   color: white;
- 
+
   position: absolute;
   top: 50px;
   left: 0px;
@@ -342,7 +362,7 @@ body {
 }
 #drahokamy {
   position: relative;
-  right: 196Px;
+  right: 196px;
   top: 30px;
   background-color: black;
   color: white;
@@ -422,49 +442,44 @@ body {
   left: 0%;
   cursor: pointer;
   font-family: MinecraftFontBold;
-
-
-
 }
-#getbackthree{
-display: none;
-font-size: 30px;
-background-color: black;
-color: white;
-width: 200x;
-position: absolute;
-top: 800px;
-right: 0px;
-text-align: left;
-cursor: pointer;
-font-family: MinecraftFontBold;}
+#getbackthree {
+  display: none;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 200x;
+  position: absolute;
+  top: 800px;
+  right: 0px;
+  text-align: left;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
+}
 
 #buycart {
- display: none;
- position: absolute;
- right: 500px;
- top: 30px;
- background-color: black;
- color: white;
- font-family: MinecraftFont;
- cursor: pointer;
- font-size: 20px;
+  display: none;
+  position: absolute;
+  right: 500px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
 }
 #shopcart {
   position: absolute;
   right: 200px;
   top: 400px;
-display: none;
-  
+  display: none;
 }
 #shopcartimg {
- 
   width: 250px;
   height: 300px;
 }
-#debugcart
-{
- color: black;
+#debugcart {
+  color: black;
   position: absolute;
   left: 0px;
 }
@@ -479,26 +494,23 @@ display: none;
   cursor: pointer;
   font-size: 20px;
   display: none;
- }
- #standardcar {
-   position: absolute;
-   right: 200px;
-   top: 400px;
- display: none;
-   
- }
- #standardcarimg {
-  
-   width: 300;
-   height: 300px;
- }
- #debugstandardcar
- {
+}
+#standardcar {
+  position: absolute;
+  right: 200px;
+  top: 400px;
+  display: none;
+}
+#standardcarimg {
+  width: 300;
+  height: 300px;
+}
+#debugstandardcar {
   color: black;
-   position: absolute;
-   left: 0px;
- }
- #buybettercar {
+  position: absolute;
+  left: 0px;
+}
+#buybettercar {
   display: none;
   position: absolute;
   right: 500px;
@@ -509,26 +521,23 @@ display: none;
   cursor: pointer;
   font-size: 20px;
   display: none;
- }
- #bettercar {
-   position: absolute;
-   right: 200px;
-   top: 400px;
- display: none;
-   
- }
- #bettercarimg {
-  
-   width: 300;
-   height: 300px;
- }
- #debugbettercar
- {
+}
+#bettercar {
+  position: absolute;
+  right: 200px;
+  top: 400px;
+  display: none;
+}
+#bettercarimg {
+  width: 300;
+  height: 300px;
+}
+#debugbettercar {
   color: black;
-   position: absolute;
-   left: 0px;
- }
- #buytieronehouse {
+  position: absolute;
+  left: 0px;
+}
+#buytieronehouse {
   display: none;
   position: absolute;
   left: 500px;
@@ -539,24 +548,221 @@ display: none;
   cursor: pointer;
   font-size: 20px;
   display: none;
- }
- #tieronehouse {
-   position: absolute;
-   left: 150px;
-   top: 100px;
- display: none;
-
-   
- } #tieronehouseimg {
+}
+#tieronehouse {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  display: none;
+}
+#tieronehouseimg {
   width: 900px;
   height: 800px;
-  
 }
 
- #debugtieronehouse
- {
+#debugtieronehouse {
   color: black;
-   position: absolute;
-   left: 0px;
- }
- 
+  position: absolute;
+  left: 0px;
+}
+#buytiertwohouse {
+  display: none;
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+}
+#tiertwohouse {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  display: none;
+}
+#tiertwohouseimg {
+  width: 900px;
+  height: 800px;
+}
+
+#debugtiertwohouse {
+  color: black;
+  position: absolute;
+  left: 0px;
+}
+#buytierthreehouse {
+  display: none;
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+}
+#tierthreehouse {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  display: none;
+}
+#tierthreehouseimg {
+  width: 900px;
+  height: 800px;
+}
+
+#debugtierthreehouse {
+  color: black;
+  position: absolute;
+  left: 0px;
+}
+#buytierfourhouse {
+  display: none;
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  background-color: black;
+  color: white;
+  font-family: MinecraftFont;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+}
+#tierfourhouse {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  display: none;
+}
+#tierfourhouseimg {
+  width: 900px;
+  height: 800px;
+}
+
+#debugtierfourhouse {
+  color: black;
+  position: absolute;
+  left: 0px;
+}
+#dealerstore {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 200px;
+  position: absolute;
+  bottom: 50%;
+  left: 0%;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
+}
+
+#getbackfour {
+  display: none;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  width: 200x;
+  position: absolute;
+  top: 800px;
+  right: 0px;
+  text-align: left;
+  cursor: pointer;
+  font-family: MinecraftFontBold;
+}
+#buybabucko {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 225px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  font-family: MinecraftFont;
+  cursor: pointer;
+}
+#buydoutnicek {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 225px;
+  position: absolute;
+  top: 25%;
+  right: 30%;
+  font-family: MinecraftFont;
+  cursor: pointer;
+}
+#homelessdeal {
+  display: none;
+  position: absolute;
+  left: 800px;
+  top: 440px;
+}
+#trashtwo {
+  display: none;
+
+  position: absolute;
+  left: 900px;
+  top: 450px;
+}
+#taketwo {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 225px;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  font-family: MinecraftFont;
+  cursor: pointer;
+}
+#trashthree {
+  display: none;
+
+  position: absolute;
+  left: 900px;
+  top: 450px;
+}
+#takethree {
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 225px;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  font-family: MinecraftFont;
+  cursor: pointer;
+}
+#ericdeal {
+  display: none;
+  position: absolute;
+  left: 50px;
+  top: 330px;
+}
+#bestdealer {
+  height: 650px;
+  width: 650x;
+}
+#finish {
+  display: none;
+  left: 40%;
+  top: 0%;
+  display: none;
+  font-size: 40px;
+  background-color: black;
+  color: yellow;
+  width: 400px;
+  position: absolute;
+  font-family: MinecraftFontBold;
+  cursor: pointer;
+}
