@@ -1,5 +1,12 @@
 # Sazka-simulator-True-Difficulty-Edition
 [Spustit](https://latethen.github.io/Sazka-simulator-True-Difficulty-Edition/)
+<h2>2.0 Update</h2>
+<p>- Added Full Game</p>
+<p>- Ending </p>
+<p>- Added option to buy all house tiers and cars</p>
+<p>- Added babůčko and doutníček (money buffs)</p>
+<p>- Added dealer</p>
+
 
 <h2>1.0.3 Update</h2>
 <p>- Added Dirt House </p>
