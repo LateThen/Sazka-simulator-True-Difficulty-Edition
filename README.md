@@ -1,5 +1,8 @@
 # Sazka-simulator-True-Difficulty-Edition
 [Spustit](https://latethen.github.io/Sazka-simulator-True-Difficulty-Edition/)
+<h2>2.0.1 Update</h2>
+<p>- Bug Fixes</p>
+
 <h2>2.0 Update</h2>
 <p>- Added Full Game</p>
 <p>- Ending </p>
