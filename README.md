@@ -1,6 +1,6 @@
 # Sazka-simulator-True-Difficulty-Edition
 [Spustit](https://latethen.github.io/Sazka-simulator-True-Difficulty-Edition/)
-<h2>2.0.2 Update</h2>
+<h2>2.0.2 Update (18.01.2022)</h2>
 <p>- Bug Fixes</p>
 <p>- Babůčko & Doutníček price changes </p>
 <p>- Babůčko > 5000 Kč</p>
