@@ -103,10 +103,10 @@ getback.onclick = () => {
     dealerstore.style.display = "none";
   }
 };
-let babuckoprice = 100000;
+let babuckoprice = 5000;
 let babuckofix = 0;
 let doutnicekfix = 0;
-let doutnicekprice = 10000000;
+let doutnicekprice = 15000;
 homelessgame.onclick = () => {
   getbacktwo.style.display = "block";
   banner.style.display = "none";
@@ -898,6 +898,23 @@ buytieronehouse.onmouseover = () => {
   winningamount.innerHTML =
     "Koupit tier 1 barák za " + tieronehouseprice + " Kč";
 };
+buytiertwohouse.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML =
+    "Koupit tier 2 barák za " + tiertwohouseprice + " Kč";
+};
+buytierthreehouse.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML =
+    "Koupit tier 3 barák za " + tierthreehouseprice + " Kč";
+};
+buytierfourhouse.onmouseover = () => {
+  winningamount.style.color = "white";
+  winningamount.innerHTML =
+    "Koupit tier 4 barák za " + tierfourhouseprice + " Kč";
+};
+
+
 buystandardcar.onclick = () => {
   if (standardcarprice <= cash) {
     standardcarfix += 1;
@@ -1022,7 +1039,7 @@ buytierfourhouse.onclick = () => {
 };
 buybabucko.onmouseover = () => {
   winningamount.style.color = "white";
-  winningamount.innerHTML = "Koupit babucko za " + babuckoprice + " Kč";
+  winningamount.innerHTML = "Koupit babůčko za " + babuckoprice + " Kč";
 };
 
 buydoutnicek.onmouseover = () => {
